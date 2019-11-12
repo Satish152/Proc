@@ -1,0 +1,85 @@
+[
+  {
+    "description": "  I want to use this template for my feature file",
+    "elements": [
+      {
+        "id": "title-of-your-feature;title-of-your-scenario",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Title of your scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "Open the browser and Load the URL",
+            "result": {
+              "status": "passed",
+              "duration": 38514701
+            },
+            "line": 25,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:2"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "User entered the text in the search box",
+            "result": {
+              "status": "failed",
+              "duration": 5001710600,
+              "error_message": "function timed out after 5000 milliseconds"
+            },
+            "line": 26,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:6"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click on search",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:13"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 916900
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:49"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "line": 20,
+    "name": "Title of your feature",
+    "tags": [],
+    "uri": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\utility\\test.feature",
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "78.0.3904.87"
+      },
+      "device": "MacBook Pro 15",
+      "platform": {
+        "name": "OSX",
+        "version": "10.12.6"
+      }
+    }
+  }
+]

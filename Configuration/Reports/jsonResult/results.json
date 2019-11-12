@@ -1,0 +1,74 @@
+[
+  {
+    "description": "  I want to use this template for my feature file",
+    "elements": [
+      {
+        "id": "title-of-your-feature;title-of-your-scenario",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Title of your scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "Open the browser and Load the URL",
+            "result": {
+              "status": "passed",
+              "duration": 24068564300
+            },
+            "line": 25,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:2"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "User entered the text in the search box",
+            "result": {
+              "status": "passed",
+              "duration": 9111430800
+            },
+            "line": 26,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "click on login button",
+            "result": {
+              "status": "passed",
+              "duration": 70684000899
+            },
+            "line": 27,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:15"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 1310299
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:49"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "line": 20,
+    "name": "Title of your feature",
+    "tags": [],
+    "uri": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\utility\\test.feature"
+  }
+]

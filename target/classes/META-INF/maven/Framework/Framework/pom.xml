@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Framework</groupId>
+  <artifactId>Framework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+<build>
+<pluginManagement>
+<plugins>
+<plugin>
+  <groupId>com.github.greengerong</groupId>
+  <artifactId>maven-ng-protractor</artifactId>
+  <version>0.0.2</version>
+  <configuration>
+    <protractor>protractor</protractor>
+    <configFile>H:\workspace\Framework\Configuration\testConfig.js</configFile>
+  </configuration>
+  <executions>
+    <execution>
+    <id>ng-protractor</id>
+    <phase>regressionTest</phase>
+    <goals>
+       <goal>run</goal>
+    </goals>
+    </execution>
+  </executions>
+</plugin>
+</plugins>
+</pluginManagement>
+</build>
+</project>
