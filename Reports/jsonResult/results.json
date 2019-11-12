@@ -10,12 +10,23 @@
         "steps": [
           {
             "arguments": [],
+            "keyword": "Before ",
+            "result": {
+              "status": "passed",
+              "duration": 26102200
+            },
+            "hidden": true,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\resources\\timeOutConfig.js:5"
+            }
+          },
+          {
+            "arguments": [],
             "keyword": "Given ",
             "name": "Open the browser and Load the URL",
             "result": {
-              "status": "failed",
-              "duration": 100033059800,
-              "error_message": "function timed out after 100000 milliseconds"
+              "status": "passed",
+              "duration": 14926987000
             },
             "line": 25,
             "match": {
@@ -27,11 +38,13 @@
             "keyword": "When ",
             "name": "User entered the text in the search box",
             "result": {
-              "status": "skipped"
+              "status": "failed",
+              "duration": 10577288400,
+              "error_message": "NoSuchElementError: No element found using locator: By(css selector, *[id=\"passs\"])\n    at elementArrayFinder.getWebElements.then (H:\\workspace\\Framework\\node_modules\\protractor\\built\\element.js:814:27)\n    at ManagedPromise.invokeCallback_ (H:\\workspace\\Framework\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (H:\\workspace\\Framework\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (H:\\workspace\\Framework\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at asyncRun (H:\\workspace\\Framework\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27)\n    at H:\\workspace\\Framework\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)Error\n    at ElementArrayFinder.applyAction_ (H:\\workspace\\Framework\\node_modules\\protractor\\built\\element.js:459:27)\n    at ElementArrayFinder.(anonymous function).args [as sendKeys] (H:\\workspace\\Framework\\node_modules\\protractor\\built\\element.js:91:29)\n    at ElementFinder.(anonymous function).args [as sendKeys] (H:\\workspace\\Framework\\node_modules\\protractor\\built\\element.js:831:22)\n    at World.<anonymous> (H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:11:29)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
             },
             "line": 26,
             "match": {
-              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:8"
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:7"
             }
           },
           {
@@ -43,7 +56,7 @@
             },
             "line": 27,
             "match": {
-              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:15"
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:14"
             }
           },
           {
@@ -51,11 +64,23 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 788799
+              "duration": 3334601
             },
             "hidden": true,
             "match": {
               "location": "C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:49"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 2209400
+            },
+            "hidden": true,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\resources\\timeOutConfig.js:10"
             }
           }
         ],
