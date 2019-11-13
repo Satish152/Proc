@@ -60,7 +60,7 @@ beforeLaunch:function(){
     	 categories: {
     	       "info" :{"appenders": ["console"], "level": "info"},
     	       "default" :{"appenders": ["console", "file"], "level": "DEBUG"},
-            //"file" : {"appenders": ["file"], "level": "DEBUG"}
+              //"file" : {"appenders": ["file"], "level": "DEBUG"}
     	}
     });
 },
