@@ -2,6 +2,7 @@ module.exports=function(){
 	this.Given(/^Open the browser and Load the URL$/,async function(){
 		await browser.get("https://facebook.com");
 		browser.logger.info("Title of the window is :"+await browser.getTitle());
+		browser.logger.info("This is a new info");
 	});
 	
 	this.When(/^User entered the text in the search box$/,async function(){
