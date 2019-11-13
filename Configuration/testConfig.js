@@ -43,7 +43,6 @@ beforeLaunch:function(){
     log4js.configure({
     	appenders: {
     		out: { type: 'console' }, 
-    	    default: { type: 'dateFile', filename: 'H:\\workspace\\Framework\\Reports\\logs\\default', "pattern":"-dd.log",alwaysIncludePattern:true}, 
     	    info:{ type: 'dateFile', filename: 'H:\\workspace\\Framework\\Reports\\logs\\info', "pattern":"-dd.log",alwaysIncludePattern:true},
     	    "console" : {
     	        "type": "console",
@@ -54,14 +53,14 @@ beforeLaunch:function(){
     	        "type": "file",
     	        "filename": "H:\\workspace\\Framework\\Reports\\logs\\log_file.log",
     	        "maxLogSize": 10240,
-    	        "backups": 3,
-    	        "pattern": "%d{dd/MM hh:mm} %-5p %m"
+    	        //"backups": 3,
+    	       // "pattern": "%d{dd/MM hh:mm} %-5p %m"
     	    }
     	  },
     	 categories: {
-    	    info: { appenders: ['info'], level: 'info' },
+    	    "info": { appenders: ['info'], level: 'info' },
     	    "default" :{"appenders": ["console", "file"], "level": "DEBUG"},
-            "file" : {"appenders": ["file"], "level": "DEBUG"}
+            //"file" : {"appenders": ["file"], "level": "DEBUG"}
     	}
     });
 },
