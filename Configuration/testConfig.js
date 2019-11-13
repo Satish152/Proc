@@ -33,7 +33,7 @@ capabilities: {
 ignoreUncaughtExceptions:false,
 // Spec patterns are relative to this directory.
 specs: [
-    'H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\utility\\test.feature'
+    'H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\features\\test.feature'
 ],
 
 beforeLaunch:function(){
@@ -66,7 +66,7 @@ beforeLaunch:function(){
     });
 },
 cucumberOpts: {
-    require:['../src/test/resources/timeOutConfig.js','H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js'],
+    require:['../src/test/resources/com.learnFramework.utility/timeOutConfig.js','H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js'],
     tags: false,
     profile: false,
     format:'json:Reports/jsonResult/results.json',
@@ -83,6 +83,7 @@ cucumberOpts: {
      //folder of screenshots
      screenshots.screenShotDirectory = 'H:\\workspace\\Framework\\Screenshots';
 	 
+     global.testData=require("H:\\workspace\\Framework\\TestData\\testData.json");
 	 browser.logger = log4js.getLogger('protractorLog4js');
 	 browser.waitForAngularEnabled(false);
 	 browser.manage().window().maximize();

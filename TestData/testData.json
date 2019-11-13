@@ -1,0 +1,7 @@
+{
+  "Login": {
+  "CM":[{"Username":"Test","Password":"Test2"}],
+  "AEM":[{"Username":"Test1","Password":"Test2"}],
+  "AE":[{"Username":"Test2","Password":"Test2"}]
+  }
+}

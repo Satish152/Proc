@@ -6,9 +6,9 @@ module.exports=function(){
 	
 	this.When(/^User entered the text in the search box$/,async function(){
 		browser.sleep(5000);
-		await facebook.email().sendKeys("srongala1@yahoo.com");
+		await facebook.email().sendKeys(testData.Login.CM[0].Username);
 		browser.sleep(3000);
-		await facebook.password().sendKeys("sweety@21");
+		await facebook.password().sendKeys(testData.Login.CM[0].Password);
 	});
 	
 	this.Then(/^click on login button$/,async function(){

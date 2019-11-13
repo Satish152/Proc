@@ -4,7 +4,7 @@ var facebook=function(){
 	}
 	
 	this.password=function(){
-		return element(By.id("passs"));
+		return element(By.id("pass"));
 	}
 	
 	this.submit=function(){
