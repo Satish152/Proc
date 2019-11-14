@@ -2,7 +2,7 @@ module.exports=function(){
 	this.Given(/^Open the browser and Load the URL$/,async function(){
 		await browser.get("https://facebook.com");
 		browser.logger.info("Title of the window is :"+await browser.getTitle());
-		browser.logger.info("This is a new info");
+		//screenshots.takesScreenshot("filename");
 	});
 	
 	this.When(/^User entered the text in the search box$/,async function(){
@@ -16,4 +16,13 @@ module.exports=function(){
 		browser.sleep(3000);
 		await facebook.submit().click();
 	});
+	
+	this.Then(/^User tried to open in new browser instance$/,async function(){
+		browser2=await browser.forkNewDriverInstance(true);
+		
+	});
+	
+	this.When(/^User entered the text in the email field$/,async function(){
+		await browser2.facebook.email().sendKeys("test");
+	})
 }

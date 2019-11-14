@@ -13,11 +13,11 @@
             "keyword": "Before ",
             "result": {
               "status": "passed",
-              "duration": 5360700
+              "duration": 3649800
             },
             "hidden": true,
             "match": {
-              "location": "H:\\workspace\\Framework\\src\\test\\resources\\com.learnFramework.utility\\timeOutConfig.js:5"
+              "location": "H:\\workspace\\Framework\\src\\test\\resources\\com.learnFramework.utility\\timeOutConfig.js:6"
             }
           },
           {
@@ -26,7 +26,7 @@
             "name": "Open the browser and Load the URL",
             "result": {
               "status": "passed",
-              "duration": 10619500100
+              "duration": 19845339300
             },
             "line": 25,
             "match": {
@@ -35,15 +35,29 @@
           },
           {
             "arguments": [],
-            "keyword": "When ",
-            "name": "User entered the text in the search box",
+            "keyword": "Then ",
+            "name": "User tried to open in new browser instance",
             "result": {
               "status": "passed",
-              "duration": 9400038601
+              "duration": 7979399
             },
-            "line": 26,
+            "line": 28,
             "match": {
-              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:8"
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:20"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "User entered the text in the email field",
+            "result": {
+              "status": "failed",
+              "duration": 903700,
+              "error_message": "TypeError: Cannot read property 'email' of undefined\n    at World.<anonymous> (H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:26:27)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)"
+            },
+            "line": 29,
+            "match": {
+              "location": "H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js:25"
             }
           },
           {
@@ -51,7 +65,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 13243400
+              "duration": 650600
             },
             "hidden": true,
             "match": {
@@ -63,11 +77,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 219400
+              "duration": 1672800
             },
             "hidden": true,
             "match": {
-              "location": "H:\\workspace\\Framework\\src\\test\\resources\\com.learnFramework.utility\\timeOutConfig.js:10"
+              "location": "H:\\workspace\\Framework\\src\\test\\resources\\com.learnFramework.utility\\timeOutConfig.js:11"
             }
           }
         ],

@@ -6,3 +6,5 @@ package-lock.json
 .project
 .classpath
 .tmp/
+Configuration/configTest.js
+src/test/resources/com.learnFramework.utility/testFile.js

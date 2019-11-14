@@ -1,6 +1,8 @@
 const log4js = require('log4js');
 var fs=require('fs');
 global.screenshots = require('protractor-take-screenshots-on-demand');
+global.browser2;
+
 
 exports.config = {
 
@@ -10,7 +12,6 @@ directConnect:true,
 framework: 'custom',
 // path relative to the current config file
 frameworkPath: require.resolve('C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor-cucumber-framework'),
-//seleniumArgs: ['Dwebdriver.ie.driver=C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\IEDriverServer.exe'],
 capabilities: {
     'browserName': 'chrome',
     metadata: {
@@ -68,25 +69,22 @@ cucumberOpts: {
     require:['../src/test/resources/com.learnFramework.utility/timeOutConfig.js','H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js'],
     tags: false,
     profile: false,
-    format:'json:Reports/jsonResult/results.json',
+    format:'json:../Reports/jsonResult/results.json',
     'no-source': true
 },
  onPrepare: function () {
 	 const logDefault = log4js.getLogger('default');
-	 const logResult=log4js.getLogger('result');
-	 const logError=log4js.getLogger('error');
-	 const logTask=log4js.getLogger('task');
 	 const logInfo=log4js.getLogger('info');
 	 
 	 screenshots.browserNameJoiner = ' - '; //this is the default
      //folder of screenshots
      screenshots.screenShotDirectory = 'H:\\workspace\\Framework\\Screenshots';
-	 
      global.testData=require("H:\\workspace\\Framework\\TestData\\testData.json");
 	 browser.logger = log4js.getLogger('protractorLog4js');
 	 browser.waitForAngularEnabled(false);
 	 browser.manage().window().maximize();
 	 global.facebook=require("../src/test/java/com/learnFramework/pages/fbPageObjects.js");
+	 global.utility=require("../src/test/resources/com.learnFramework.utility/testFile.js");
   },
   plugins: [{
       package: 'H:\\workspace\\Framework\\node_modules\\protractor-multiple-cucumber-html-reporter-plugin',
