@@ -23,7 +23,7 @@ Feature: Title of your feature
  
   Scenario: Title of your scenario
     Given Open the browser and Load the URL
-    #When User entered the text in the search box
+   # When User entered the text in the search box
    # And click on login button
     Then User tried to open in new browser instance
     And User entered the text in the email field

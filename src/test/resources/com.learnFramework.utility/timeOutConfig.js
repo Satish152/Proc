@@ -6,6 +6,7 @@ var configure = function () {
 	  this.Before(function(scenario){
 			const scenarioName = scenario.getName();
 			browser.logger.info('scenario name :'+`${scenarioName}`);
+			//browser2=firstBrowser.forkNewDriverInstance();
 		});
 		
 		this.After(function(scenario){
@@ -15,9 +16,7 @@ var configure = function () {
 			}
 			});
 		
-		this.openNewBrowser=function(){
-			return browser.forkNewDriverInstance(true);
-		}
+		
 	};
 
 	module.exports = configure;

@@ -24,11 +24,9 @@ capabilities: {
             name: 'OSX',
             version: '10.12.6'
         },
-        disableLog:{
-        	Type:false,
-        	Mandatory:'No',
-        	Default:false,
-        }
+       disableLog:true,
+       durationInMS:true,
+       openReportInBrowser:true
     }
 },
 ignoreUncaughtExceptions:false,
@@ -77,10 +75,12 @@ cucumberOpts: {
 	 const logInfo=log4js.getLogger('info');
 	 
 	 screenshots.browserNameJoiner = ' - '; //this is the default
-     //folder of screenshots
+     //folder of screenshot
      screenshots.screenShotDirectory = 'H:\\workspace\\Framework\\Screenshots';
+     global.newBrowser=require("../src/test/resources/com.learnFramework.utility/newBrowserinstance.js")
      global.testData=require("H:\\workspace\\Framework\\TestData\\testData.json");
 	 browser.logger = log4js.getLogger('protractorLog4js');
+	 global.firstBrowser=browser;
 	 browser.waitForAngularEnabled(false);
 	 browser.manage().window().maximize();
 	 global.facebook=require("../src/test/java/com/learnFramework/pages/fbPageObjects.js");

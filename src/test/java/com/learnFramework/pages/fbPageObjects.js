@@ -1,15 +1,28 @@
-var facebook=function(){
+var facebook=function(browserInstance){
+browserInit=browserInstance;	
 	this.email=function(){
-	return element(By.id("email"));
+	return browserInit.element(By.id("email"));
 	}
 	
 	this.password=function(){
-		return element(By.id("pass"));
+		return browserInit.element(By.id("pass"));
 	}
 	
 	this.submit=function(){
-		return element(By.xpath("//input[@aria-label='Log In']"));
+		return browserInit.element(By.xpath("//input[@aria-label='Log In']"));
+	}
+	
+	this.search=function(){
+		return browserInit.element(By.name("q"));
+	}
+	
+	this.title=function(){
+		return browserInit.getTitle();
+	}
+	
+	this.trySearch=function(){
+		return browserInit.element(by.xpath("//input[@type='search']"));
 	}
 }
 
-module.exports=new facebook();
+module.exports=facebook;
