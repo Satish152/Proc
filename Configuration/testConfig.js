@@ -2,7 +2,7 @@ const log4js = require('log4js');
 var fs=require('fs');
 global.screenshots = require('protractor-take-screenshots-on-demand');
 global.browser2;
-
+var propertiesReader=require('properties-reader');
 
 exports.config = {
 
@@ -76,11 +76,12 @@ cucumberOpts: {
 	 
 	 screenshots.browserNameJoiner = ' - '; //this is the default
      //folder of screenshot
-     screenshots.screenShotDirectory = 'H:\\workspace\\Framework\\Screenshots';
-     global.newBrowser=require("../src/test/resources/com.learnFramework.utility/newBrowserinstance.js")
-     global.testData=require("H:\\workspace\\Framework\\TestData\\testData.json");
+     screenshots.screenShotDirectory = '../Screenshots';
+     global.openNewBrowser=require("../src/test/resources/com.learnFramework.utility/newBrowserinstance.js")
+     global.testData=require("../TestData/testData.json");
 	 browser.logger = log4js.getLogger('protractorLog4js');
 	 global.firstBrowser=browser;
+	 global.properties=propertiesReader("../TestData/propertyConfig.properties");
 	 browser.waitForAngularEnabled(false);
 	 browser.manage().window().maximize();
 	 global.facebook=require("../src/test/java/com/learnFramework/pages/fbPageObjects.js");

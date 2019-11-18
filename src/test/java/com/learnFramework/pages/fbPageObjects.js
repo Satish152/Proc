@@ -1,19 +1,21 @@
 var facebook=function(browserInstance){
-browserInit=browserInstance;	
+browserInit=browserInstance;
+element=browserInit.element;
+
 	this.email=function(){
-	return browserInit.element(By.id("email"));
+	return element(By.id("emaill"));
 	}
 	
 	this.password=function(){
-		return browserInit.element(By.id("pass"));
+		return element(By.id("pass"));
 	}
 	
 	this.submit=function(){
-		return browserInit.element(By.xpath("//input[@aria-label='Log In']"));
+		return element(By.xpath("//input[@aria-label='Log In']"));
 	}
 	
 	this.search=function(){
-		return browserInit.element(By.name("q"));
+		return element(By.name("q"));
 	}
 	
 	this.title=function(){
@@ -21,7 +23,7 @@ browserInit=browserInstance;
 	}
 	
 	this.trySearch=function(){
-		return browserInit.element(by.xpath("//input[@type='search']"));
+		return element(by.xpath("//input[@type='search']"));
 	}
 }
 
