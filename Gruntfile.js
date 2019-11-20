@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      files: ['Gruntfile.js', 'H:\workspace\Framework\src\test\java\com\learnFramework\TestCases\spec.js'],
+      files: ['Gruntfile.js', '../src/test/java/com/proc/TestCases/spec.js'],
       options: {
         // options here to override JSHint defaults
         globals: {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     protractor: {
         options: {
           keepAlive: true,
-          configFile: "H:\\workspace\\Framework\\Configuration\\testConfig.js"
+          configFile: "../Proc/Configuration/testConfig.js"
         },
         singlerun: {},
         auto: {

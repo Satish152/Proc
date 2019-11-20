@@ -1,4 +1,4 @@
-var {setDefaultTimeout} = require('C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\cucumber');
+var {setDefaultTimeout} = require('cucumber');
 
 var configure = function () {
 	  this.setDefaultTimeout(100 * 1000);

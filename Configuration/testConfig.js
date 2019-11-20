@@ -3,6 +3,7 @@ var fs=require('fs');
 global.screenshots = require('protractor-take-screenshots-on-demand');
 global.browser2;
 var propertiesReader=require('properties-reader');
+const {Given, Then, When, Before} = require('cucumber');
 
 exports.config = {
 
@@ -11,7 +12,7 @@ directConnect:true,
 
 framework: 'custom',
 // path relative to the current config file
-frameworkPath: require.resolve('C:\\Users\\DELL\\AppData\\Roaming\\npm\\node_modules\\protractor-cucumber-framework'),
+frameworkPath: require.resolve('protractor-cucumber-framework'),
 capabilities: {
     'browserName': 'chrome',
     metadata: {
@@ -32,7 +33,7 @@ capabilities: {
 ignoreUncaughtExceptions:false,
 // Spec patterns are relative to this directory.
 specs: [
-    'H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\features\\test.feature'
+    '../Proc/src/test/java/com/proc/features/test.feature'
 ],
 
 beforeLaunch:function(){
@@ -42,7 +43,7 @@ beforeLaunch:function(){
     log4js.configure({
     	appenders: {
     		out: { type: 'console' }, 
-    	    info:{ type: 'dateFile', filename: 'H:\\workspace\\Framework\\Reports\\logs\\info', "pattern":"-dd.log",alwaysIncludePattern:false},
+    	    info:{ type: 'dateFile', filename: '../Reports/logs/info', "pattern":"-dd.log",alwaysIncludePattern:false},
     	    "console" : {
     	        "type": "console",
     	        "category": "console"
@@ -50,7 +51,7 @@ beforeLaunch:function(){
     	    "file" : {
     	        "category": "test-file-appender",
     	        "type": "file",
-    	        "filename": "H:\\workspace\\Framework\\Reports\\logs\\log_file.log",
+    	        "filename": "../Reports/logs/log_file.log",
     	        "maxLogSize": 10240,
     	       // "backups": 3,
     	      //  "pattern": "%d{dd/MM hh:mm} %-5p %m"
@@ -64,7 +65,7 @@ beforeLaunch:function(){
     });
 },
 cucumberOpts: {
-    require:['../src/test/resources/com.learnFramework.utility/timeOutConfig.js','H:\\workspace\\Framework\\src\\test\\java\\com\\learnFramework\\TestCases\\spec.js'],
+    require:['../src/test/resources/com.proc.utility/timeOutConfig.js','../Proc/src/test/java/com/proc/stepDefinition/spec.js'],
     tags: false,
     profile: false,
     format:'json:../Reports/jsonResult/results.json',
@@ -73,27 +74,26 @@ cucumberOpts: {
  onPrepare: function () {
 	 const logDefault = log4js.getLogger('default');
 	 const logInfo=log4js.getLogger('info');
-	 
 	 screenshots.browserNameJoiner = ' - '; //this is the default
      //folder of screenshot
      screenshots.screenShotDirectory = '../Screenshots';
-     global.openNewBrowser=require("../src/test/resources/com.learnFramework.utility/newBrowserinstance.js")
+     global.openNewBrowser=require("../src/test/resources/com.proc.utility/newBrowserinstance.js")
      global.testData=require("../TestData/testData.json");
 	 browser.logger = log4js.getLogger('protractorLog4js');
 	 global.firstBrowser=browser;
 	 global.properties=propertiesReader("../TestData/propertyConfig.properties");
 	 browser.waitForAngularEnabled(false);
 	 browser.manage().window().maximize();
-	 global.facebook=require("../src/test/java/com/learnFramework/pages/fbPageObjects.js");
-	 global.utility=require("../src/test/resources/com.learnFramework.utility/testFile.js");
+	 global.facebook=require("../src/test/java/com/proc/pages/fbPageObjects.js");
+	 global.utility=require("../src/test/resources/com.proc.utility/testFile.js");
   },
   plugins: [{
-      package: 'H:\\workspace\\Framework\\node_modules\\protractor-multiple-cucumber-html-reporter-plugin',
+      package: 'H:/workspace/Proc/node_modules/protractor-multiple-cucumber-html-reporter-plugin',
       options:{
           // read the options part for more options
           automaticallyGenerateReport: true,
           removeExistingJsonReportFile: true,
-          reportPath:"H:\\workspace\\Framework\\Reports\\HtmlReports",
+          reportPath:"../Reports/HtmlReports",
           reportName:"test.html"
       },
       customData: {

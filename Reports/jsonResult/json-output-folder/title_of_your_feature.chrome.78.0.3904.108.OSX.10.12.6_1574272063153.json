@@ -1,0 +1,75 @@
+[
+  {
+    "description": "  I want to use this template for my feature file",
+    "keyword": "Feature",
+    "name": "Title of your feature",
+    "line": 20,
+    "id": "title-of-your-feature",
+    "tags": [],
+    "uri": "..\\src\\test\\java\\com\\proc\\features\\test.feature",
+    "elements": [
+      {
+        "id": "title-of-your-feature;title-of-your-scenario",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Title of your scenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "Open the browser and Load the URL",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "User tried to open in new browser instance",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "User entered the text in the email field",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "..\\node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "78.0.3904.108"
+      },
+      "device": "MacBook Pro 15",
+      "platform": {
+        "name": "OSX",
+        "version": "10.12.6"
+      },
+      "disableLog": true,
+      "durationInMS": true,
+      "openReportInBrowser": true
+    }
+  }
+]
